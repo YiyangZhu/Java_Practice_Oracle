@@ -7,12 +7,9 @@ class MakeChange{
     static int makeChange(int n) {
         int ways = 0;
         for (int count25 = 0; count25 * 25 <= n; count25++) {
-            for (int count10 = 0; count10 * 10 <= n; count10++) {
-                for (int count5 = 0; count5 * 5 <= n; count5++) {
-                    int sum = count25*25 + count10*10 + count5*5;
-                    if (sum <= n) {
-                        ways++;
-                    }
+            for (int count10 = 0; count10 * 10 <= n-count25*25; count10++) {
+                for (int count5 = 0; count5 * 5 <= n-count25*25-count10*10; count5++) {
+                    ways++;
                 }
             }
         }
