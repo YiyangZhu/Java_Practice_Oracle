@@ -21,7 +21,7 @@ class NestTrys{
                 }
             }
         } catch (Throwable ex){
-            System.out.println("Some exceptions occur!");
+            System.out.println("Error occur - program terminated!");
         }
     }
 }
